@@ -1,0 +1,499 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Lato:wght@300;400;700&family=Great+Vibes&display=swap');
+
+:root {
+    --primary-color: #937666;
+    --secondary-color: #c8b6a6;
+    --tertiary-color: #f4eee8;
+    --text-color: #4a3f35;
+    --light-text: #8a7a6d;
+    --gold-accent: #b8a274;
+    --bg-color: #f9f7f5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url('/api/placeholder/1000/800') center/cover no-repeat;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    border: 1px solid var(--gold-accent);
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+h1, h2, h3 {
+    font-family: 'Cormorant Garamond', serif;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}
+
+h1 {
+    font-size: 3.2rem;
+    color: var(--gold-accent);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 2.7rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
+
+h3 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+p {
+    margin-bottom: 1rem;
+    font-weight: 300;
+}
+
+.intro {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    font-style: italic;
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--primary-color);
+    letter-spacing: 1px;
+}
+
+.names {
+    font-size: 3.5rem;
+    font-weight: 400;
+    margin: 2rem 0;
+    color: var(--gold-accent);
+    font-family: 'Great Vibes', cursive;
+}
+
+.ampersand {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4rem;
+    color: var(--secondary-color);
+    margin: 0 1.5rem;
+}
+
+.date {
+    font-size: 1.5rem;
+    margin: 1rem 0 3rem;
+    color: var(--light-text);
+}
+
+.section {
+    padding: 6rem 0;
+    text-align: center;
+    position: relative;
+}
+
+.section:nth-child(odd) {
+    background-color: var(--tertiary-color);
+    background-image: linear-gradient(to right, rgba(200, 182, 166, 0.1) 1px, transparent 1px), 
+                      linear-gradient(to bottom, rgba(200, 182, 166, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+.couple {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 3rem 0;
+}
+
+.profile {
+    width: 45%;
+    min-width: 300px;
+    margin: 1rem;
+    padding: 2.5rem;
+    background-color: white;
+    border-radius: 3px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.profile:hover {
+    transform: translateY(-5px);
+}
+
+.profile::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border: 1px solid var(--gold-accent);
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.profile-img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+    border: 3px solid var(--gold-accent);
+    box-shadow: 0 5px 15px rgba(184, 162, 116, 0.2);
+}
+
+.profile h3 {
+    color: var(--primary-color);
+}
+
+.event-details {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+}
+
+.event {
+    width: 45%;
+    min-width: 300px;
+    margin: 1rem;
+    padding: 2.5rem;
+    background-color: white;
+    border-radius: 3px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.event:hover {
+    transform: translateY(-5px);
+}
+
+.event::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border: 1px solid var(--gold-accent);
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.map {
+    height: 300px;
+    width: 100%;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    margin-top: 3rem;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 1rem;
+    margin-top: 3rem;
+}
+
+.gallery-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 3px;
+    transition: all 0.4s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-img::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent 70%, rgba(0, 0, 0, 0.3));
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.gallery-img:hover::after {
+    opacity: 1;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 4rem 2rem;
+    margin-top: 5rem;
+    position: relative;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px), 
+                      linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(to right, transparent, var(--gold-accent), transparent);
+}
+
+.date {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.7rem;
+    margin: 1rem 0 3rem;
+    color: var(--primary-color);
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+/* Scroll Progress Indicator Styles */
+.scroll-progress-container {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 180px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 30px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5px;
+    z-index: 1000;
+    overflow: hidden;
+    border: 1px solid rgba(184, 162, 116, 0.3);
+}
+
+.progress-indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background: linear-gradient(to right, rgba(184, 162, 116, 0.2), rgba(147, 118, 102, 0.3));
+    border-radius: 30px;
+    transition: width 0.1s ease;
+}
+
+.bride-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    left: 5px;
+    z-index: 1001;
+    transition: left 0.1s ease;
+    border: 2px solid var(--gold-accent);
+    background-color: white;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.groom-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    right: 5px;
+    z-index: 1001;
+    border: 2px solid var(--gold-accent);
+    background-color: white;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.kissing {
+    display: none;
+    position: absolute;
+    right: 5px;
+    width: 100px;
+    height: 50px;
+    z-index: 1002;
+    filter: drop-shadow(0 3px 10px rgba(0, 0, 0, 0.1));
+}
+
+/* New romantic elements */
+.quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    max-width: 800px;
+    margin: 2rem auto;
+    line-height: 1.8;
+    position: relative;
+    padding: 0 2rem;
+}
+
+.quote::before, .quote::after {
+    content: '"';
+    font-family: 'Great Vibes', cursive;
+    font-size: 4rem;
+    color: var(--gold-accent);
+    opacity: 0.3;
+    position: absolute;
+}
+
+.quote::before {
+    top: -20px;
+    left: 0;
+}
+
+.quote::after {
+    bottom: -50px;
+    right: 0;
+}
+
+.divider {
+    position: relative;
+    height: 30px;
+    width: 100%;
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.divider::before {
+    content: '';
+    height: 1px;
+    width: 100%;
+    background: linear-gradient(to right, transparent, var(--gold-accent), transparent);
+    position: absolute;
+    top: 50%;
+    left: 0;
+}
+
+.divider-icon {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 30px;
+    background-color: var(--bg-color);
+    font-size: 1.2rem;
+    line-height: 30px;
+}
+
+.section:nth-child(odd) .divider-icon {
+    background-color: var(--tertiary-color);
+}
+
+.countdown {
+    margin: 3rem 0;
+    text-align: center;
+}
+
+.countdown-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.countdown-item {
+    width: 80px;
+    text-align: center;
+}
+
+.countdown-number {
+    font-size: 2.5rem;
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--gold-accent);
+    font-weight: 600;
+}
+
+.countdown-label {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--light-text);
+}
+
+.poem {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 700px;
+    margin: 3rem auto;
+    color: var(--text-color);
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    .names {
+        font-size: 2rem;
+    }
+    
+    .profile, .event {
+        width: 90%;
+    }
+    
+    .scroll-progress-container {
+        width: 120px;
+    }
+    
+    .countdown-container {
+        gap: 1rem;
+    }
+    
+    .countdown-item {
+        width: 60px;
+    }
+    
+    .countdown-number {
+        font-size: 2rem;
+    }
+}
