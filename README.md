@@ -84,8 +84,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 ```
-
-Kode ini:
 - Membuat indikator kemajuan di bagian bawah layar
 - Menampilkan dua gambar avatar (pengantin wanita dan pria) yang bergerak semakin dekat saat pengguna menggulir
 - Ketika pengguna mencapai bagian bawah halaman, mengganti avatar terpisah dengan gambar "berciuman"
@@ -126,8 +124,6 @@ function updateCountdown() {
 updateCountdown();
 const countdownTimer = setInterval(updateCountdown, 1000);
 ```
-
-Kode ini:
 - Menetapkan tanggal pernikahan target (20 Juni 2025)
 - Menghitung perbedaan waktu antara sekarang dan tanggal pernikahan
 - Mengkonversi perbedaan waktu menjadi hari, jam, menit, dan detik
